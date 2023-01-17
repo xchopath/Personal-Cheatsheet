@@ -35,3 +35,10 @@ Access container shell:
 ```
 sudo docker exec -ti <container> /bin/sh
 ```
+
+# Miscellaneous
+
+Remove all (prune):
+```
+sudo docker system prune -a
+```
