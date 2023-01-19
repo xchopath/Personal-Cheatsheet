@@ -36,6 +36,11 @@ Access container shell:
 sudo docker exec -ti <container> /bin/sh
 ```
 
+Show dangle images:
+```
+sudo docker images -a --filter "dangling=true"
+```
+
 # Miscellaneous
 
 Remove all (prune):
