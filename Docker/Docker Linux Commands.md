@@ -14,6 +14,11 @@ Remove image:
 sudo docker rmi <image>
 ```
 
+Show dangle images:
+```
+sudo docker images -a --filter "dangling=true"
+```
+
 # Container
 
 View all containers:
@@ -34,11 +39,6 @@ sudo docker run --name <container> -dit <images>
 Access container shell:
 ```
 sudo docker exec -ti <container> /bin/sh
-```
-
-Show dangle images:
-```
-sudo docker images -a --filter "dangling=true"
 ```
 
 # Miscellaneous
