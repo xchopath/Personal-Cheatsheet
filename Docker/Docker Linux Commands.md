@@ -6,7 +6,7 @@ sudo docker images -a
 
 Build image from `Dockerfile`:
 ```
-sudo docker build -t "imagename:Dockerfile" /path-to/
+sudo docker build -t "name:tag" /path-to/dockerfile/
 ```
 
 Remove image:
