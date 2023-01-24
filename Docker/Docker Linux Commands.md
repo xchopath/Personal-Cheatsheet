@@ -41,6 +41,11 @@ Access container shell:
 sudo docker exec -ti <container> /bin/sh
 ```
 
+Docker run debug (deleted when finished):
+```
+sudo docker run -a STDERR -a STDOUT --name <container-name> --rm -ti <image-id>
+```
+
 # Miscellaneous
 
 Remove all (prune):
