@@ -15,8 +15,7 @@ sudo systemctl elasticsearch kibana
 
 ### Add Superuser on Elasticsearch
 ```
-sudo /usr/share/elasticsearch/bin/elasticsearch-users useradd <username>
-sudo /usr/share/elasticsearch/bin/elasticsearch-users roles <username> -a superuser
+sudo /usr/share/elasticsearch/bin/elasticsearch-users useradd <username> -p <password> -r superuser
 ```
 
 ----------
