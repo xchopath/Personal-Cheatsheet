@@ -1,4 +1,6 @@
-# Image
+# Basic Command
+
+## Image
 View all images:
 ```
 sudo docker images -a
@@ -14,12 +16,12 @@ Remove image:
 sudo docker rmi <image>
 ```
 
-Show dangle images:
+Show all dangle/unused images:
 ```
 sudo docker images -a --filter "dangling=true"
 ```
 
-# Container
+## Container
 
 View all containers:
 ```
@@ -41,14 +43,14 @@ Access container shell:
 sudo docker exec -ti <container> /bin/sh
 ```
 
-Docker run debug (deleted when finished):
+Docker run debug (will deleted when finished):
 ```
 sudo docker run -a STDERR -a STDOUT --name <container-name> --rm -ti <image-id>
 ```
 
-# Miscellaneous
+## Deletion
 
-Remove all (prune):
+Remove all system (prune):
 ```
 sudo docker system prune -a
 ```
