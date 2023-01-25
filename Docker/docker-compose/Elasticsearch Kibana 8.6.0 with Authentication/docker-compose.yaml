@@ -6,7 +6,6 @@ services:
     environment:
       - discovery.type=single-node
       - xpack.security.enabled=true
-      - xpack.security.audit.enabled=true
       - ELASTIC_PASSWORD=changeme
     ports:
       - "9200:9200"
