@@ -11,8 +11,7 @@ services:
       - "9200:9200"
       - "9300:9300"
     volumes:
-      - elasticsearch-data:/usr/share/elasticsearch/data
-      - elasticsearch-config:/usr/share/elasticsearch/config
+      - elasticsearch-volume:/usr/share/elasticsearch
     networks:
       - elasticstacknetwork
   kibana:
@@ -22,17 +21,20 @@ services:
     container_name: kibana
     ports:
       - "5601:5601"
+    volumes:
+      - kibana-volume:/usr/share/kibana
     environment:
       - ELASTICSEARCH_URL=http://elasticsearch:9200
       - ELASTICSEARCH_USERNAME=kibana_sys
       - ELASTICSEARCH_PASSWORD=changeme
+      - SERVER_BASEPATH=/
     networks:
       - elasticstacknetwork
 networks:
   elasticstacknetwork:
     driver: bridge
 volumes:
-  elasticsearch-data:
+  elasticsearch-volume:
     driver: local
-  elasticsearch-config:
+  kibana-volume:
     driver: local
