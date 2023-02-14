@@ -8,9 +8,9 @@ services:
       - "27017:27017"
     volumes:
       - ./data:/data/db
-      - ./mongodb.conf:/etc/mongod.conf
-      - ./mongod.log:/var/log/mongodb/mongod.log
+      - ./mongod.conf:/etc/mongodb/mongod.conf
+      - ./mongodb-log:/var/log/mongodb
     environment:
       - MONGO_INITDB_ROOT_USERNAME=iamroot
       - MONGO_INITDB_ROOT_PASSWORD=changemebro
-    command: mongod --config /etc/mongod.conf
+    command: mongod --config /etc/mongodb/mongod.conf
