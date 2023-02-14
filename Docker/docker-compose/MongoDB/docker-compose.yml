@@ -9,7 +9,6 @@ services:
     volumes:
       - ./data:/data/db
       - ./mongod.conf:/etc/mongodb/mongod.conf
-      - ./mongodb-log:/var/log/mongodb
     environment:
       - MONGO_INITDB_ROOT_USERNAME=iamroot
       - MONGO_INITDB_ROOT_PASSWORD=changemebro
