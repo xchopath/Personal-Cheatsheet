@@ -1,11 +1,12 @@
 version: '3'
 services:
   redis:
-    image: redis
+    image: redis:7.0.8-bullseye
+    container_name: redis-server-v7
     ports:
       - 6379:6379
     environment:
-      - REDIS_PASSWORD=changeme
+      - REDIS_PASSWORD=changemebro
       - REDIS_MAXMEMORY=8gb
       - REDIS_MAXMEMORY_POLICY=allkeys-lru
     command: redis-server --bind 0.0.0.0
