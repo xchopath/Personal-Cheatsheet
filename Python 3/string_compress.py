@@ -1,4 +1,5 @@
 import gzip
+import json
 
 def strdecompress(string):
 	decompressed_data = gzip.decompress(string)
