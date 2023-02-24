@@ -11,6 +11,6 @@ services:
       - ./docker-system/mongodb/data:/data/db
     environment:
       - MONGO_INITDB_ROOT_USERNAME=mongoroot
-      - MONGO_INITDB_ROOT_PASSWORD=Gu3ss-Wh4t
+      - MONGO_INITDB_ROOT_PASSWORD=mongopassword
     command: mongod --bind_ip 0.0.0.0 --auth
     network_mode: "bridge"
